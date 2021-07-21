@@ -16,7 +16,8 @@ import {
 } from 'react-native';
 import HomeScreen from './src/screens/Home/Index';
 import Post from './src/components/post/index';
-import feed from './assets/data/feed'
+import feed from './assets/data/feed';
+import SearchResultsScreen from './src/screens/SearchResults/index';
 
 
 
@@ -29,7 +30,7 @@ const App = () => {
 <>
     <StatusBar barStyle='dark-content' backgroundColor="transparent"/>
     <SafeAreaView>
-     <Post post = {post1}/>
+     <SearchResultsScreen />
      
       
      
