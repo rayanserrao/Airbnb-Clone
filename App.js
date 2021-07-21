@@ -19,6 +19,7 @@ import Post from './src/components/post/index';
 import feed from './assets/data/feed';
 import SearchResultsScreen from './src/screens/SearchResults/index';
 import DestinationSearchScreen from './src/screens/DestinationSearch/index';
+import GuestScreen from './src/screens/Guests/index';
 
 
 
@@ -31,7 +32,7 @@ const App = () => {
 <>
     <StatusBar barStyle='dark-content' backgroundColor="transparent"/>
     <SafeAreaView>
-     <DestinationSearchScreen/>
+     <GuestScreen/>
      
       
      
