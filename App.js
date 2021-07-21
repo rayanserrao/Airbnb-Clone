@@ -15,6 +15,7 @@ import {
   
 } from 'react-native';
 import HomeScreen from './src/screens/Home/Index';
+import Post from './src/components/post/index';
 
 
 
@@ -25,7 +26,7 @@ const App = () => {
 <>
     <StatusBar barStyle='dark-content' backgroundColor="transparent"/>
     <SafeAreaView>
-      <HomeScreen />
+     <Post/>
       
      
     </SafeAreaView>
