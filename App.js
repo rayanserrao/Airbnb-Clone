@@ -16,17 +16,21 @@ import {
 } from 'react-native';
 import HomeScreen from './src/screens/Home/Index';
 import Post from './src/components/post/index';
+import feed from './assets/data/feed'
 
 
 
 const App = () => {
+
+  const post1 = feed[0];
   
 
   return (
 <>
     <StatusBar barStyle='dark-content' backgroundColor="transparent"/>
     <SafeAreaView>
-     <Post/>
+     <Post post = {post1}/>
+     
       
      
     </SafeAreaView>

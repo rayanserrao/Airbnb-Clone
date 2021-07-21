@@ -5,21 +5,27 @@ StyleSheet,
 TouchableOpacity,
 Image } from 'react-native';
 
-const Post = () =>{
+const Post = (props) =>{
+    
+
+    const post = props.post;
+
+    
+
     return (
         <View style={styles.container}>
          {/* image   */}
          <Image style={styles.image} source={require('../../../assets/images/wallpaper.jpg')} />
 
-         <Text style={styles.bedroom}>1 bed 1 Bedroom</Text>
-         <Text style={styles.desc} numberOfLines={1}>bedoroom with cozzy moood nad enjoyable for couples</Text>
+         <Text style={styles.bedroom}>{post.bed} bed {post.bedroom} Bedroom</Text>
+         <Text style={styles.desc} numberOfLines={2}> {post.type}. {post.title}</Text>
          <Text style={styles.price}>
-             <Text style={styles.oldprice}>$36 </Text>
-            <Text style={styles.newprice}> $30</Text>
+             <Text style={styles.oldprice}>${post.oldPrice} </Text>
+            <Text style={styles.newprice}> ${post.newPrice}</Text>
             /night
          </Text>
 
-         <Text style={styles.totalprice}>$290 total</Text>
+         <Text style={styles.totalprice}>${post.totalPrice} total</Text>
 
          
         </View>
