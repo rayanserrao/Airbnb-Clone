@@ -5,9 +5,11 @@ import {
     StyleSheet,
     ImageBackground,
     TouchableOpacity,
+    Pressable
 } from 'react-native';
 
 import Fontisto from 'react-native-vector-icons/Fontisto';
+import { useNavigation } from '@react-navigation/native';
 
 
 
@@ -15,6 +17,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto';
 
 
 const HomeScreen = () => {
+    const navigation = useNavigation()
     return (
         <View>
             
@@ -24,17 +27,17 @@ const HomeScreen = () => {
 
             <ImageBackground source={require('../../../assets/images/wallpaper.jpg')} style={styles.image}>
 
-            <TouchableOpacity style={styles.search} onPress={console.warn("search button pressd")}>
+            <Pressable style={styles.search} onPress={()=> navigation.navigate("Destination Search")}>
                 <Fontisto name='search' size={25} color={"red"} />
                 <Text style={styles.searchbuttontext}>Where are you going?</Text>
-            </TouchableOpacity>
+            </Pressable>
             
 
                 <Text style={styles.title}>Go Near</Text>
 
-                <TouchableOpacity style={styles.button} onPress={console.warn("button pressd")}>
+                <Pressable style={styles.button} onPress={console.warn("button pressd")}>
                     <Text style={styles.buttontext}>Explore nearby places</Text>
-                </TouchableOpacity>
+                </Pressable>
             </ImageBackground>
 
 

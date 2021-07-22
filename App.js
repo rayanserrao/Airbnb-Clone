@@ -5,8 +5,9 @@
  * @format
  * @flow strict-local
  */
-
+import 'react-native-gesture-handler'
 import React from 'react';
+import Router from './src/navigation/Router';
 
 import {
   SafeAreaView,
@@ -31,12 +32,7 @@ const App = () => {
   return (
 <>
     <StatusBar barStyle='dark-content' backgroundColor="transparent"/>
-    <SafeAreaView>
-     <GuestScreen/>
-     
-      
-     
-    </SafeAreaView>
+    <Router/>
 
     </>
   );

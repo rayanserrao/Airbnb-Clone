@@ -6,11 +6,13 @@ import {
     StyleSheet,
     TouchableOpacity,
     FlatList,
-    TextInput
+    TextInput,
+    Pressable
 } from 'react-native';
 import Post from '../../components/post';
 import feed from '../../../assets/data/feed';
 import searchResults from '../../../assets/data/search'
+import { useNavigation } from '@react-navigation/core';
 
 import Entypo from 'react-native-vector-icons/Entypo';
 
@@ -18,6 +20,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 const DestinationSearchScreen = () => {
 
     const [inputext, setInputtext] = useState('')
+    const navigation = useNavigation()
     return (
         <View style={styles.conatiner}>
             {/* textinput */}
@@ -34,7 +37,7 @@ const DestinationSearchScreen = () => {
             <FlatList
                 data={searchResults}
                 renderItem={({ item }) =>
-                    <View style={styles.row}>
+                    <Pressable onPress={() =>navigation.navigate("Guest")} style={styles.row}>
 
                         <View style={styles.iconcontainer}>
 
@@ -42,7 +45,7 @@ const DestinationSearchScreen = () => {
 
                         </View>
                         <Text style={styles.locationtext}>{item.description}</Text>
-                    </View>
+                    </Pressable>
                 }
             />
 
